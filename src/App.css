@@ -95,6 +95,7 @@ select {
 
 .note-list {
   margin-top: 1rem;
+  margin-bottom: 1rem;
   padding: 0 1.5rem;
   display: flex;
   flex-wrap: wrap;
