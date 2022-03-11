@@ -1,38 +1,138 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header {
+  margin-bottom: 32px;
+  /* background-color: #E45826; */
+  background-color: whitesmoke;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.header-title {
+  font-family: "Shadows Into Light", cursive;
+  font-size: 3rem;
+  /* color: #fff; */
+  color: #e45826;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*                                                              Note-Input  */
+.note-input-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.note-input-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
 
-.App-link {
-  color: #61dafb;
+input,
+textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2rem;
+  resize: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/*                                                              Main  */
+
+/* .main {
+  padding: 1.5rem 1rem;
+} */
+
+/*                                                              Note-Sorter  */
+
+.note-sorter {
+  display: flex;
+  padding: 0 1.5rem;
+  margin-top: 1rem;
+}
+
+.note-sorter-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.note-sorter-form label {
+  text-align: center;
+}
+
+select {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 7px;
+  background-color: whitesmoke;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+  outline: none;
+}
+
+/*                                                              Note-List  */
+
+.note-list {
+  margin-top: 1rem;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+/*                                                              Note-Card  */
+
+.note-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+  width: 350px;
+  padding: 16px 20px;
+}
+
+.note-card h3 {
+  margin-bottom: 0.75rem;
+}
+.note-card p {
+  margin-bottom: 0.75rem;
+}
+
+.note-card small {
+  margin: 0.5rem 0;
+  color: grey;
+}
+
+@media (max-width: 480px) {
+  .note-list {
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+  .note-sorter {
+    padding: 0 0.75rem;
   }
+}
+
+.Button {
+  margin-bottom: 0.25rem;
 }
