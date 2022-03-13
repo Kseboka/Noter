@@ -1,7 +1,7 @@
-import { useState } from "react"
+import { useState } from 'react'
 
 const NotesSorter = ({ passSort }) => {
-  const [selectedSort, setSelectedSort] = useState("Descending")
+  const [selectedSort, setSelectedSort] = useState('Descending')
 
   const handleSelected = (e) => {
     const { value } = e.target
