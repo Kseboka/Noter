@@ -7,8 +7,8 @@ import './App.css'
 
 function App() {
   const [notes, setNotes] = useState(JSON.parse(localStorage.getItem('notes')) || [])
-  const [edittableNote, setEdittableNote] = useState({})
   const [sortSelection, setSortSelection] = useState('')
+  const [updateNote, setUpdateNote] = useState({})
   const [isEdit, setIsEdit] = useState(true)
 
   useEffect(() => {
@@ -34,16 +34,11 @@ function App() {
       return note.id === editNote
     })
 
-    setEdittableNote(() => {
+    setUpdateNote(() => {
       const [newEdit] = abc
       return newEdit
     })
     deleteNote(editNote)
-    // console.log(edittableNote.title)
-  }
-
-  const editNoteInput = (editNote) => {
-    editNote({ ...edittableNote })
   }
 
   const selectedSort = (selected) => {
@@ -53,7 +48,7 @@ function App() {
   return (
     <div className='App'>
       <Header />
-      <NoteInput addNote={addNote} edittableNote={edittableNote} editNoteInput={editNoteInput} isEdit={isEdit} setIsEdit={setIsEdit} />
+      <NoteInput addNote={addNote} updateNote={updateNote} isEdit={isEdit} setIsEdit={setIsEdit} />
       <NotesSorter passSort={selectedSort} />
       <NotesList notes={notes} deleteNote={deleteNote} sortSelection={sortSelection} editNote={editNote} />
     </div>
