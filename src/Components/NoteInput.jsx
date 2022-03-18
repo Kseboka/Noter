@@ -19,7 +19,6 @@ const NoteInput = ({ addNote, updateNote, editNoteInput, isEdit, setIsEdit }) =>
     const { name, value } = e.target
 
     if (isEdit) {
-      console.log('hello')
       setNoteInput({ ...updateInput })
     }
 
